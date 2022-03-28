@@ -40,12 +40,12 @@
         <div class="col-md-8">
             <a href="/posts/{{ $posting['slug'] }}">
                 <h2>
-                    {{ $posting['judul_postingan'] }}
+                    {{ $posting['judul'] }}
                 </h2>
             </a>
             <small>Author : <b> {{ $posting['author'] }} </b></small>
             <p>
-                {{ $posting['body'] }}
+                {{ $posting['excerpt'] }}
             </p>
             <p>
                 <a class="btn" href="/posts/{{ $posting['slug'] }}">View details »</a>
