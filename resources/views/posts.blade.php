@@ -38,17 +38,18 @@
             <img alt="Bootstrap Image Preview" src="img/{{ $posting['gambar'] }}" class="rounded" width="100%">
         </div>
         <div class="col-md-8">
-            <a href="/posts/{{ $posting['slug'] }}">
+            <a href="/posts/{{ $posting->slug }}">
                 <h2>
-                    {{ $posting['judul'] }}
+                    {{ $posting->judul }}
                 </h2>
             </a>
-            <small>Author : <b> {{ $posting['author'] }} </b></small>
+            <small>Di Publish : <b> {{ $posting->published_at }} </b></small>
             <p>
-                {{ $posting['excerpt'] }}
+                {{ $posting->excerpt }}
+
             </p>
             <p>
-                <a class="btn" href="/posts/{{ $posting['slug'] }}">View details »</a>
+                <a class="btn" href="/posts/{{ $posting->slug }}">View details »</a>
             </p>
         </div>
         @endforeach

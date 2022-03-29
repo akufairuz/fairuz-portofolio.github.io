@@ -30,15 +30,5 @@ Route::get('/about', function () {
 
 Route::get('/blog', [PostController::class, 'hp_index']);
 
-Route::get('posts/{slug}', [PostController::class, 'hp_postingan']);
-
-
-
-// buat user login, dll
-Route::get('/pengguna', function () {
-    return view('pengguna', [
-        "name" => "Fairuz Musyaffa",
-        "email" => "fairuz@gmail.com",
-        "gambar" => "kucing.jpg"
-    ]);
-});
+// memanggil model bernama POST untuk menampilkan detail data:namafield (slug)
+Route::get('posts/{post:slug}', [PostController::class, 'hp_postingan']);
